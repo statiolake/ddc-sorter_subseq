@@ -36,7 +36,6 @@ export class Filter extends BaseFilter<Params> {
       score: this.calcScore(completeStr, item),
     }));
     scoredItems.sort((a, b) => a.score - b.score);
-    console.log(scoredItems);
     return Promise.resolve(scoredItems.map((scoredItem) => scoredItem.item));
   }
 
